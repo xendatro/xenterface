@@ -4,16 +4,16 @@ require(script.Parent.Modules.tagger)()
 
 local xenterface = {}
 
-function xenterface:CreateFunction(group: string, f: (functionObject: FunctionService.FunctionObject) -> nil)
-	FunctionService:Create(group, f)
+function xenterface:CreateFunction(pageGroup: string, f: (functionObject: FunctionService.FunctionObject) -> nil)
+	FunctionService:Create(pageGroup, f)
 end
 
-function xenterface:DeleteFunction(group: string)
-	FunctionService:Delete(group)
+function xenterface:DeleteFunction(pageGroup: string)
+	FunctionService:Delete(pageGroup)
 end
 
-function xenterface:FireFunction(group: string, id: any)
-	FunctionService:Fire(group, id)
+function xenterface:FireFunction(pageGroup: string, pageId: string | number, rawTab: GuiButton?)
+	FunctionService:Fire(pageGroup, pageId, rawTab)
 end
 
 return xenterface
