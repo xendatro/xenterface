@@ -41,4 +41,14 @@ function table.merge(t1, t2)
 	return {table.unpack(t1), table.unpack(t2)}
 end
 
+function table.remdups(t: {}) --remove duplicates
+	local s = {}
+	for _, v in t do
+		if not table.find(s, v) then
+			table.insert(s, v)
+		end
+	end
+	return s
+end
+
 return table

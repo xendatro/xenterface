@@ -7,18 +7,20 @@ Tab.__index = Tab
 
 local function setUpConnections(self)
 	self.Connections = {}
-	self.MouseButton1Click = self.Tab.MouseButton1Click:Connect(function()
+	self.MouseButton1Click = self.Button.MouseButton1Click:Connect(function()
 		FunctionService:Fire(
 			self.Tab:GetAttribute(Settings.GroupAttribute),
-			self.Tab:GetAttribute(Settings.IdAttribute)
+			self.Tab:GetAttribute(Settings.IdAttribute),
+			self.Button
 		)
 	end)
 end
 
-function Tab.new(tab: GuiButton)
+function Tab.new(tab: GuiButton | Configuration)
 	local self = setmetatable({}, Tab)
 
 	self.Tab = tab
+	self.Button = if not tab:IsA("GuiButton") then tab.Parent else tab
 
 	setUpConnections(self)
 
