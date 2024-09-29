@@ -12,8 +12,9 @@ Arguably the most gross and unorganized aspect of programming on ROBLOX is UI sc
 
 ## Use Cases
 - [x] Tackle complex UI navigation
-- [x] Eliminate messy UI code
 - [x] Create menu systems with ease
+- [x] Power complicated inventory UI
+- [x] Eliminate messy UI code
 
 ## Basic Usage
 i will probably make a yt video or something at some point.
