@@ -17,14 +17,15 @@ xenterface is straightforward. Unlike many other UI frameworks, xenterface is re
 i will probably make a yt video or something at some point.
 
 ## API
-### Page
-Tag: `Page`
-| Attribute | Description |
-| ------ | ------- |
-| *`Page_Group: string` | The PageGroup that the attributed GuiObject should be a part of. |
-| *`Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to be manipulated by corresponding tabs. |
+### xenterface
+Simply start xenterface by requiring the xenterface ModuleScript!
 
-Attributes marked with * are required to specify.
+`require(ReplicatedStorage.xenterfaceFolder.xenterface) --your path to xenterface`
+| Method | Description |
+| ------ | ------- |
+| `xenterface:CreateFunction(pageGroup: string, f: (functionObject: FunctionObject) -> nil)` | Links the passed in function to the specified PageGroup. |
+| `xenterface:FireFunction(pageGroup: string, pageId: string \| number, rawTab: GuiButton?)` | Fires the function associated with the specified PageGroup and PageId. An additional trigger tab can be provided. |
+| `xenterface:DeleteFunction(pageGroup: string)` | Deletes the function associated with the specified PageGroup, if it exists. |
 
 ### Tab
 Tag: `Tab`
@@ -36,15 +37,15 @@ Tag: `Tab`
 
 Attributes marked with * are required to specify.
 
-### xenterface
-Simply start xenterface by requiring the xenterface ModuleScript!
-
-`require(ReplicatedStorage.xenterfaceFolder.xenterface) --your path to xenterface`
-| Method | Description |
+### Page
+Tag: `Page`
+| Attribute | Description |
 | ------ | ------- |
-| `xenterface:CreateFunction(pageGroup: string, f: (functionObject: FunctionObject) -> nil)` | Links the passed in function to the specified PageGroup. |
-| `xenterface:FireFunction(pageGroup: string, pageId: string \| number, rawTab: GuiButton?)` | Fires the function associated with the specified PageGroup and PageId. An additional trigger tab can be provided. |
-| `xenterface:DeleteFunction(pageGroup: string)` | Deletes the function associated with the specified PageGroup, if it exists. |
+| *`Page_Group: string` | The PageGroup that the attributed GuiObject should be a part of. |
+| *`Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to be manipulated by corresponding tabs. |
+
+Attributes marked with * are required to specify.
+
 ### FunctionObject
 Received as a parameter in the function passed into `xenterface:CreateFunction()`.
 | Field | Description |
