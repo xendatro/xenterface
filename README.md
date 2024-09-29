@@ -12,7 +12,7 @@ xenterface aims to get rid of all that messiness. Leveraging CollectionService's
 - [x] Create menu systems with ease
 
 ## Basic Usage
-i will probably make a yt video or something at some point
+i will probably make a yt video or something at some point.
 
 ## API
 ### xenterface
