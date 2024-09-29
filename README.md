@@ -15,6 +15,18 @@ xenterface aims to get rid of all that messiness. Leveraging CollectionService's
 i will probably make a yt video or something at some point.
 
 ## API
+### Page
+Tag: `Page`
+| Method | Description |
+| ------ | ------- |
+| `Page_Group: string` | The PageGroup that the attributed GuiObject should be a part of. |
+| `Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to be manipulated by corresponding tabs. |
+### Tab
+Tag: `Tab`
+| Method | Description |
+| ------ | ------- |
+| `Page_Group: string` | The PageGroup that the attributed GuiButton should be a part of. |
+| `Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to manipulate corresponding page. |
 ### xenterface
 Simply start xenterface by requiring it!
 `require(ReplicatedStorage.xenterface) --your path to xenterface`
