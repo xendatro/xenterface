@@ -23,7 +23,7 @@ Simply start xenterface by requiring it!
 | `xenterface:CreateFunction(pageGroup: string, f: (functionObject: FunctionObject) -> nil)` | Links the passed in function to the specified PageGroup. |
 | `xenterface:FireFunction(pageGroup: string, pageId: string \| number, rawTab: GuiButton?)` | Fires the function associated with the specified PageGroup and PageId. An additional trigger tab can be provided. |
 | `xenterface:DeleteFunction(pageGroup: string)` | Deletes the function associated with the specified PageGroup, if it exists. |
-### Function Object
+### FunctionObject
 Received as a parameter in the function passed into `xenterface:CreateFunction()`.
 | Field | Description |
 | ------ | ------- |
