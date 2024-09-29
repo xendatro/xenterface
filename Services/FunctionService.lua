@@ -5,8 +5,15 @@ local Player = Players.LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 
 local table = require(script.Parent.Parent.Libraries.table)
-local Signal = require(script.Parent.Parent.Classes.Signal)
 local Settings = require(script.Parent.Parent.Settings.Settings)
+
+export type FunctionObject = {
+	RawTab: GuiButton,
+	SelectedTabs: {GuiButton},
+	SelectedPages: {GuiObject},
+	UnselectedTabs: {GuiButton},
+	UnselectedPages: {GuiObject}
+}
 
 local FunctionService = {}
 
@@ -21,7 +28,7 @@ function FunctionService:Delete(group: string)
 	Functions[group] = nil
 end
 
-function FunctionService:Fire(group: string, id: any)
+function FunctionService:Fire(group: string, id: any, tab: GuiButton)
 	local f = Functions[group]
 	if not f then return end
 	local tabs = TagService:GetTaggedOfPredicate(Settings.TabTag, function(v: Instance)
@@ -44,7 +51,14 @@ function FunctionService:Fire(group: string, id: any)
 		return v:GetAttribute(Settings.IdAttribute) ~= id
 	end)
 	
-	f(selectedTabs, selectedPages, unselectedTabs, unselectedPages)
+	local functionObject: FunctionObject = {
+		RawTab = tab,
+		SelectedTabs = selectedTabs,
+		SelectedPages = selectedPages,
+		UnselectedTabs = unselectedTabs,
+		UnselectedPages = unselectedPages
+	}
+	f(functionObject)
 end
 
 return FunctionService

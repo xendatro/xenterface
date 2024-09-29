@@ -4,7 +4,7 @@ require(script.Parent.Modules.tagger)()
 
 local xenterface = {}
 
-function xenterface:CreateFunction(group: string, f: (selectedTabs: {GuiButton}, selectedPages: {GuiObject}, unselectedTabs: {GuiButton}, unselectedPages: {GuiObject}) -> nil)
+function xenterface:CreateFunction(group: string, f: (functionObject: FunctionService.FunctionObject) -> nil)
 	FunctionService:Create(group, f)
 end
 
