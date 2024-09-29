@@ -8,6 +8,7 @@ local table = require(script.Parent.Parent.Libraries.table)
 local Settings = require(script.Parent.Parent.Settings.Settings)
 
 export type FunctionObject = {
+	PageId: string,
 	RawTab: GuiButton,
 	SelectedTabs: {GuiButton},
 	SelectedPages: {GuiObject},
@@ -44,14 +45,25 @@ function FunctionService:Fire(group: string, id: any, tab: GuiButton)
 	local unselectedTabs = table.filter(tabs, function(v: Instance)
 		return v:GetAttribute(Settings.IdAttribute) ~= id
 	end)
+	
+	local filterPages = function(pages)
+		for i, page in pages do
+			if not page:IsA("GuiObject") then
+				pages[i] = page.Parent
+			end
+		end
+	end
 	local selectedPages = table.filter(pages, function(v: Instance)
 		return v:GetAttribute(Settings.IdAttribute) == id
 	end)
+	filterPages(selectedPages)
 	local unselectedPages = table.filter(pages, function(v: Instance)
 		return v:GetAttribute(Settings.IdAttribute) ~= id
 	end)
+	filterPages(unselectedPages)	
 	
 	local functionObject: FunctionObject = {
+		PageId = id,
 		RawTab = tab,
 		SelectedTabs = selectedTabs,
 		SelectedPages = selectedPages,

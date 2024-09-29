@@ -39,6 +39,7 @@ Simply start xenterface by requiring it!
 Received as a parameter in the function passed into `xenterface:CreateFunction()`.
 | Field | Description |
 | ------ | ------- |
+| `PageId: string` | The PageId of the fired function. |
 | `RawTab: GuiButton?` | The literal tab that fired the function. If fired manually through `xenterface` without argument `rawTab` specified, this field will be `nil`. |
 | `SelectedTabs: {GuiButton}` | An array of tabs with PageIds matching that of the clicked tab. |
 | `SelectedPages: {GuiObject}` | An array of pages with PageIds matching that of the clicked tab. |
