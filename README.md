@@ -37,8 +37,8 @@ Tag: `Tab`
 Attributes marked with * are required to specify.
 
 ### xenterface
-Simply start xenterface by requiring it!
-`require(ReplicatedStorage.xenterface) --your path to xenterface`
+Simply start xenterface by requiring the xenterface ModuleScript!
+`require(ReplicatedStorage.xenterfaceFolder.xenterface) --your path to xenterface`
 | Method | Description |
 | ------ | ------- |
 | `xenterface:CreateFunction(pageGroup: string, f: (functionObject: FunctionObject) -> nil)` | Links the passed in function to the specified PageGroup. |
