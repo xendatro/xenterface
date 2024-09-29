@@ -4,7 +4,7 @@ Simplify your UI navigation with xenterface.
 ## Why xenterface?
 Arguably the most gross and unorganized aspect of programming on ROBLOX is UI scripting. Unless you're using some other existing UI framework (such as Roact), you'll probably either end up (1) making your own lower-quality UI framework tailored specifically for that game or (2) creating a ton of disorganized MouseButton1Click connections all across your UI. 
 
-xenterface aims to get rid of all that messiness. Leveraging CollectionService's tags, Instance's attributes, and an extremely declarative paradigm, xenterface eliminates almost all UI boilerplate, and allows developers to focus solely on the functionality of their UI.
+xenterface aims to get rid of all that messiness. Leveraging CollectionService's tags, Instance's attributes, and an extremely declarative paradigm, xenterface eliminates almost all UI boilerplate, allowing developers to focus solely on the functionality of their UI.
 
 ## Use Cases
 - [x] Tackle complex UI navigation
@@ -12,7 +12,7 @@ xenterface aims to get rid of all that messiness. Leveraging CollectionService's
 - [x] Create menu systems with ease
 
 ## Basic Usage
-i will write this later
+i will probably make a yt video or something at some point
 
 ## API
 ### xenterface
