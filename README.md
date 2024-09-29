@@ -26,7 +26,7 @@ Tag: `Tab`
 | Attribute | Description |
 | ------ | ------- |
 | `Page_Group: string` | The PageGroup that the attributed GuiButton should be a part of. |
-| `Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to manipulate corresponding page. |
+| `Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to manipulate corresponding pages. |
 ### xenterface
 Simply start xenterface by requiring it!
 `require(ReplicatedStorage.xenterface) --your path to xenterface`
