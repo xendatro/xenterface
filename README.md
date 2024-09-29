@@ -6,6 +6,8 @@ Arguably the most gross and unorganized aspect of programming on ROBLOX is UI sc
 
 xenterface aims to get rid of all that messiness. Leveraging CollectionService's tags, Instance's attributes, and an extremely declarative paradigm, xenterface eliminates almost all UI boilerplate, allowing developers to focus solely on the functionality of their UI.
 
+xenterface is straightforward. Unlike many other UI frameworks, xenterface is really easy to pick up, with an API that's simple, intuitive, yet powerful. The core functionalities of xenterface take minutes to learn. Check out the YT video in the Basic Usage section.
+
 ## Use Cases
 - [x] Tackle complex UI navigation
 - [x] Eliminate messy UI code
