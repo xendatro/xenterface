@@ -7,7 +7,7 @@ Tab.__index = Tab
 
 local function setUpConnections(self)
 	self.Connections = {}
-	self.MouseButton1Click = self.Button.MouseButton1Click:Connect(function()
+	self.Connections.Input = self.Button[self.Tab:GetAttribute(Settings.InputAttribute) or "MouseButton1Click"]:Connect(function()
 		FunctionService:Fire(
 			self.Tab:GetAttribute(Settings.GroupAttribute),
 			self.Tab:GetAttribute(Settings.IdAttribute),

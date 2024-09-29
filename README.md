@@ -21,14 +21,21 @@ i will probably make a yt video or something at some point.
 Tag: `Page`
 | Attribute | Description |
 | ------ | ------- |
-| `Page_Group: string` | The PageGroup that the attributed GuiObject should be a part of. |
-| `Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to be manipulated by corresponding tabs. |
+| *`Page_Group: string` | The PageGroup that the attributed GuiObject should be a part of. |
+| *`Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to be manipulated by corresponding tabs. |
+
+Attributes marked with * are required to specify.
+
 ### Tab
 Tag: `Tab`
 | Attribute | Description |
 | ------ | ------- |
-| `Page_Group: string` | The PageGroup that the attributed GuiButton should be a part of. |
-| `Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to manipulate corresponding pages. |
+| *`Page_Group: string` | The PageGroup that the attributed GuiButton should be a part of. |
+| *`Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to manipulate corresponding pages. |
+| `Tab_InputType: string` | String of UserInputType used to activate tab. |
+
+Attributes marked with * are required to specify.
+
 ### xenterface
 Simply start xenterface by requiring it!
 `require(ReplicatedStorage.xenterface) --your path to xenterface`
