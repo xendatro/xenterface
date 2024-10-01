@@ -29,6 +29,8 @@ Simply start xenterface by requiring the xenterface ModuleScript!
 | `xenterface:CreateFunction(pageGroup: string, f: (functionObject: FunctionObject) -> nil)` | Links the passed in function to the specified PageGroup. |
 | `xenterface:FireFunction(pageGroup: string, pageId: string \| number, rawTab: GuiButton?)` | Fires the function associated with the specified PageGroup and PageId. An additional trigger tab can be provided. |
 | `xenterface:DeleteFunction(pageGroup: string)` | Deletes the function associated with the specified PageGroup, if it exists. |
+| `xenterface:GetElementById(elementId: string): GuiObject` | Returns an element with the specified id. Ids should be unique. |
+| `xenterface:GetElementByClass(elementClass: string): {GuiObject}` | Returns all elements of the given class name in a table. |
 
 ### Tab
 Tag: `Tab`
@@ -48,6 +50,13 @@ Tag: `Page`
 | *`Page_Id: string \| number` | The PageId that the attributed GuiObject should identify under to be manipulated by corresponding tabs. |
 
 Attributes marked with * are required to specify.
+
+### Element
+Tag: `Element`
+| Attribute | Description |
+| ------ | ------- |
+| `Element_Id: string` | A unique id of an element.  |
+| `Element_Class: string` | A class for the element. |
 
 ### FunctionObject
 Received as a parameter in the function passed into `xenterface:CreateFunction()`.
